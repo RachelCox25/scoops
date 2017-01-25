@@ -28,7 +28,7 @@
         <ul class="hover-top"> 
           <a href="location.html">Location</a>
         </ul>
-      
+
       </div>
       <div class="link" href="#">
         <span class="active"><i class="icon-food"></i>Menu</span>
@@ -47,21 +47,36 @@
         <ul class="hover-top">
           <a href="https://twitter.com/">Twitter</a> 
         </ul>
-      
+
       </div>
 
-      <div class="end"></div>
+      <!--<div class="end"></div>-->
     </div>
     <br />
-	
+
     <div class="jumbotron">
       <h1>Main Menu</h1>
-      <p>To brighten even the worst of days. We have created a homemade, creamy concoction using all natural ingredients.</p> 
-      <p>We aim to serve our products in a friendly enviornment that welcomes everyone.</p> 
-      <img src="icecream.png">
+      <p id="main_menu_text">We are famous for our homemade cones and also offer ice cream bars and sundaes that you will be raving about for the rest of your life!<br>(Hover your mouse over the flavor to see the picture change)</p> 
+      <img id="ice_cream_picture" src="Chocolate_Cone.png">
+      <table id="menu_table">
+        <thead>
+          <tr>
+            <th><u>Cones</u></th>
+            <th><u>Ice Cream Bars</u></th>
+            <th><u>Sundaes</u></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span id="chocolate_cone">Chocolate</span><br><br><span id="vanilla_cone">Vanilla</span><br><br><span id="stawberry_cone">Strawberry</span><br><br><span id="caramel_cone">Caramel</span><br><br><span id="rainbow_cone">Rainbow</span></td>
+            <td><span id="rainbow_bar">Rainbow</span><br><br><span id="heart_bar">Chocolate Heart</span><br><br><span id="melon_bar">Melon</span></td>
+            <td><span id="chocolate_sundae">Chocolate</span><br><br><span id="strawberry_sundae">Strawberry</span></td>
+          </tr>
+        </tbody>
+
+      </table>
+
     </div>
-    
-  </div>
 
 
 
@@ -69,6 +84,74 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/animation.js"></script> -->
 
+<script type="text/javascript">
+//Find the elements and create variables
+var chocolate_cone = document.getElementById("chocolate_cone");
+var vanilla_cone = document.getElementById("vanilla_cone");
+var strawberry_cone = document.getElementById("stawberry_cone");
+var caramel_cone = document.getElementById("caramel_cone");
+var rainbow_cone = document.getElementById("rainbow_cone");
+var rainbow_bar = document.getElementById("rainbow_bar");
+var heart_bar = document.getElementById("heart_bar");
+var melon_bar = document.getElementById("melon_bar");
+var strawberry_sundae = document.getElementById("strawberry_sundae");
+var chocolate_sundae = document.getElementById("chocolate_sundae");
+
+//Define the functions for the events
+var mouseMoveChocolateCone = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Chocolate_Cone.png";
+}
+var mouseMoveVanillaCone = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  console.log("Why isn't this working");
+  ice_cream_picture.src = "Vanilla_Cone.png";
+}
+var mouseMoveStrawberryCone = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Strawberry_Cone.png";
+}
+var mouseMoveCaramelCone = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Caramel_Cone.png";
+}
+var mouseMoveRainbowCone = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Rainbow_Cone.png";
+}
+var mouseMoveChocolateSundae = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Chocolate_Sundae.png";
+}
+var mouseMoveStrawberrySundae = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Strawberry_Sundae.png";
+}
+var mouseMoveMelonBar = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Melon_Bar.png";
+}
+var mouseMoveRainbowBar = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Rainbow_Bar.png";
+}
+var mouseMoveHeartBar = function(event){
+  var ice_cream_picture = document.getElementById("ice_cream_picture");
+  ice_cream_picture.src = "Heart_Bar.png";
+}
+//Event Listeners
+chocolate_cone.addEventListener("mousemove",mouseMoveChocolateCone);
+strawberry_cone.addEventListener("mousemove",mouseMoveStrawberryCone);
+vanilla_cone.addEventListener("mousemove",mouseMoveVanillaCone);
+caramel_cone.addEventListener("mousemove",mouseMoveCaramelCone);
+rainbow_cone.addEventListener("mousemove",mouseMoveRainbowCone);
+chocolate_sundae.addEventListener("mousemove",mouseMoveChocolateSundae);
+strawberry_sundae.addEventListener("mousemove",mouseMoveStrawberrySundae);
+melon_bar.addEventListener("mousemove",mouseMoveMelonBar);
+rainbow_bar.addEventListener("mousemove",mouseMoveRainbowBar);
+heart_bar.addEventListener("mousemove",mouseMoveHeartBar);
+
+</script>
 
 </body>
 </html>
